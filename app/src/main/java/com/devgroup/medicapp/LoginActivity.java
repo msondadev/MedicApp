@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         btnRegistro.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);
-        }
+        });
 
 
         btnLogin.setOnClickListener(v -> {
@@ -44,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-
 
     }
 }
