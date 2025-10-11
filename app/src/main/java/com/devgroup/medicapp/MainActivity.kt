@@ -1,47 +1,24 @@
 package com.devgroup.medicapp
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.devgroup.medicapp.ui.theme.MedicAppTheme
 
-class MainActivity : ComponentActivity() {
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            MedicAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Sensei",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
+
+        // ¡Esta es la línea clave! Le dice a la actividad que cargue tu diseño XML.
+        // Tienes que elegir el layout XML que deseas mostrar.
+        // Si quieres mostrar el registro, y tu layout es fragment_registro.xml:
+        setContentView(R.layout.fragment_registro)
+
+        // Si quieres mostrar el login:
+        // setContentView(R.layout.activity_login)
+
+        // Si quieres mostrar el home:
+        // setContentView(R.layout.activity_home)
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Que capo el $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MedicAppTheme {
-        Greeting("Android")
-    }
-}
+// Ya no necesitas las funciones @Composable (Greeting y GreetingPreview) en esta clase.
