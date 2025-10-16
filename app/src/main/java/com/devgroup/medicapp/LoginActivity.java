@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //Acá espero al Sensei//
         btnRegistro.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            Intent intent = new Intent(LoginActivity.this, RegistroActivity.class);
             startActivity(intent);
         });
 
