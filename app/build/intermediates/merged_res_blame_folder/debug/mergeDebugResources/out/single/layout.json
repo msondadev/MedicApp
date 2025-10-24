@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-mergeDebugResources-73:\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-mergeDebugResources-73:\\layout\\fragment_registro.xml",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\layout\\fragment_registro.xml"
+    },
+    {
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-mergeDebugResources-73:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-mergeDebugResources-73:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "com.devgroup.medicapp-mergeDebugResources-73:/layout/activity_home.xml",
+        "source": "com.devgroup.medicapp-main-76:/layout/activity_home.xml"
+    }
+]
