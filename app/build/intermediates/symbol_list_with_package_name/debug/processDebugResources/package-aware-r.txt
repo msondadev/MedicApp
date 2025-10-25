@@ -1679,10 +1679,14 @@ drawable admob_close_button_white_circle_black_cross
 drawable avd_hide_password
 drawable avd_show_password
 drawable bg_button_gradient
+drawable bg_button_gradient_login
 drawable bg_circle_white
 drawable bg_curva_blanca
 drawable bg_header_curved_gradient
+drawable bg_input_login_rounded
 drawable bg_input_rounded
+drawable bg_login_concave_curve
+drawable bg_splash_curved_wave
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1899,6 +1903,7 @@ id beginning
 id below
 id bestChoice
 id blocking
+id blueBackgroundCurved
 id bottom
 id bounce
 id bounceBoth
@@ -1938,6 +1943,7 @@ id collapseActionView
 id column
 id column_reverse
 id compose_view_saveable_id_tag
+id concaveCutout
 id confirm_button
 id constraint
 id consume_window_insets_tag
@@ -2257,7 +2263,6 @@ id text2
 id textBienvenido
 id textCargando
 id textEnd
-id textLogin
 id textNoCuenta
 id textOlvido
 id textSpacerNoButtons

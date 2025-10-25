@@ -3,9 +3,9 @@
     <string name="default_web_client_id" translatable="false">314175924557-bkhu3prtmtcevtvpaq5nfunpnibc2c41.apps.googleusercontent.com</string>
     <string name="firebase_database_url" translatable="false">https://medicapp-865b0-default-rtdb.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">314175924557</string>
-    <string name="google_api_key" translatable="false">AIzaSyC3lsYcXIal4uuuGUxhzOZ4SG0JYvsTSX4</string>
+    <string name="google_api_key" translatable="false">AIzaSyCModkxagRaIFTACEuECSeUYIp_TKUCMXo</string>
     <string name="google_app_id" translatable="false">1:314175924557:android:13c12678dc7138a18cef04</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC3lsYcXIal4uuuGUxhzOZ4SG0JYvsTSX4</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCModkxagRaIFTACEuECSeUYIp_TKUCMXo</string>
     <string name="google_storage_bucket" translatable="false">medicapp-865b0.firebasestorage.app</string>
     <string name="project_id" translatable="false">medicapp-865b0</string>
 </resources>

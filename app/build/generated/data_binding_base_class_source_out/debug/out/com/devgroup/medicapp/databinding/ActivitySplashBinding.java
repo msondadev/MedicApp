@@ -21,14 +21,19 @@ public final class ActivitySplashBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final View blueBackgroundCurved;
+
+  @NonNull
   public final ImageView logoImage;
 
   @NonNull
   public final TextView textCargando;
 
-  private ActivitySplashBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView logoImage,
+  private ActivitySplashBinding(@NonNull ConstraintLayout rootView,
+      @NonNull View blueBackgroundCurved, @NonNull ImageView logoImage,
       @NonNull TextView textCargando) {
     this.rootView = rootView;
+    this.blueBackgroundCurved = blueBackgroundCurved;
     this.logoImage = logoImage;
     this.textCargando = textCargando;
   }
@@ -60,6 +65,12 @@ public final class ActivitySplashBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.blueBackgroundCurved;
+      View blueBackgroundCurved = ViewBindings.findChildViewById(rootView, id);
+      if (blueBackgroundCurved == null) {
+        break missingId;
+      }
+
       id = R.id.logoImage;
       ImageView logoImage = ViewBindings.findChildViewById(rootView, id);
       if (logoImage == null) {
@@ -72,7 +83,8 @@ public final class ActivitySplashBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySplashBinding((ConstraintLayout) rootView, logoImage, textCargando);
+      return new ActivitySplashBinding((ConstraintLayout) rootView, blueBackgroundCurved, logoImage,
+          textCargando);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

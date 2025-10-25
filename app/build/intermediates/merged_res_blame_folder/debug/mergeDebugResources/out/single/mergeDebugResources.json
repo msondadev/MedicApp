@@ -1,19 +1,19 @@
 [
     {
-        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\drawable_bg_circle_white.xml.flat",
-        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\bg_circle_white.xml"
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\drawable_bg_splash_curved_wave.xml.flat",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\bg_splash_curved_wave.xml"
     },
     {
-        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\drawable_bg_circle_white.xml.flat",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\bg_circle_white.xml"
     },
     {
         "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.devgroup.medicapp-debug-74:/layout_activity_home.xml.flat",
-        "source": "com.devgroup.medicapp-main-76:/layout/activity_home.xml"
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -48,16 +48,20 @@
         "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\layout\\fragment_registro.xml"
     },
     {
-        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.devgroup.medicapp-debug-74:/layout_activity_login.xml.flat",
+        "source": "com.devgroup.medicapp-main-76:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-anydpi_ic_launcher.xml.flat",
@@ -76,6 +80,10 @@
         "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\bg_header_curved_gradient.xml"
     },
     {
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\drawable_bg_input_login_rounded.xml.flat",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\bg_input_login_rounded.xml"
+    },
+    {
         "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
@@ -88,6 +96,14 @@
         "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\drawable_bg_button_gradient_login.xml.flat",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\bg_button_gradient_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\drawable_bg_login_concave_curve.xml.flat",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\bg_login_concave_curve.xml"
+    },
+    {
         "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -96,12 +112,12 @@
         "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\mipmap-anydpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\drawable_bg_curva_blanca.xml.flat",
-        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\bg_curva_blanca.xml"
-    },
-    {
         "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\drawable_bg_curva_blanca.xml.flat",
+        "source": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-main-76:\\drawable\\bg_curva_blanca.xml"
     },
     {
         "merged": "C:\\Users\\polsk\\.gradle\\daemon\\8.13\\com.devgroup.medicapp-debug-74:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",

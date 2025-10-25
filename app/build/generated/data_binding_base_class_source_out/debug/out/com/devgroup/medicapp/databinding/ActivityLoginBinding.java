@@ -33,19 +33,25 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final Button btnRegistro;
 
   @NonNull
+  public final View concaveCutout;
+
+  @NonNull
   public final EditText editContrasena;
 
   @NonNull
   public final EditText editUsuario;
 
   @NonNull
+  public final View headerBackground;
+
+  @NonNull
+  public final View logoCircleContainer;
+
+  @NonNull
   public final ImageView logoImage;
 
   @NonNull
   public final TextView textBienvenido;
-
-  @NonNull
-  public final TextView textLogin;
 
   @NonNull
   public final TextView textNoCuenta;
@@ -55,18 +61,21 @@ public final class ActivityLoginBinding implements ViewBinding {
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
       @NonNull SignInButton btnGoogleSignIn, @NonNull Button btnLogin, @NonNull Button btnRegistro,
-      @NonNull EditText editContrasena, @NonNull EditText editUsuario, @NonNull ImageView logoImage,
-      @NonNull TextView textBienvenido, @NonNull TextView textLogin, @NonNull TextView textNoCuenta,
-      @NonNull TextView textOlvido) {
+      @NonNull View concaveCutout, @NonNull EditText editContrasena, @NonNull EditText editUsuario,
+      @NonNull View headerBackground, @NonNull View logoCircleContainer,
+      @NonNull ImageView logoImage, @NonNull TextView textBienvenido,
+      @NonNull TextView textNoCuenta, @NonNull TextView textOlvido) {
     this.rootView = rootView;
     this.btnGoogleSignIn = btnGoogleSignIn;
     this.btnLogin = btnLogin;
     this.btnRegistro = btnRegistro;
+    this.concaveCutout = concaveCutout;
     this.editContrasena = editContrasena;
     this.editUsuario = editUsuario;
+    this.headerBackground = headerBackground;
+    this.logoCircleContainer = logoCircleContainer;
     this.logoImage = logoImage;
     this.textBienvenido = textBienvenido;
-    this.textLogin = textLogin;
     this.textNoCuenta = textNoCuenta;
     this.textOlvido = textOlvido;
   }
@@ -116,6 +125,12 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.concaveCutout;
+      View concaveCutout = ViewBindings.findChildViewById(rootView, id);
+      if (concaveCutout == null) {
+        break missingId;
+      }
+
       id = R.id.editContrasena;
       EditText editContrasena = ViewBindings.findChildViewById(rootView, id);
       if (editContrasena == null) {
@@ -128,6 +143,18 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.headerBackground;
+      View headerBackground = ViewBindings.findChildViewById(rootView, id);
+      if (headerBackground == null) {
+        break missingId;
+      }
+
+      id = R.id.logoCircleContainer;
+      View logoCircleContainer = ViewBindings.findChildViewById(rootView, id);
+      if (logoCircleContainer == null) {
+        break missingId;
+      }
+
       id = R.id.logoImage;
       ImageView logoImage = ViewBindings.findChildViewById(rootView, id);
       if (logoImage == null) {
@@ -137,12 +164,6 @@ public final class ActivityLoginBinding implements ViewBinding {
       id = R.id.textBienvenido;
       TextView textBienvenido = ViewBindings.findChildViewById(rootView, id);
       if (textBienvenido == null) {
-        break missingId;
-      }
-
-      id = R.id.textLogin;
-      TextView textLogin = ViewBindings.findChildViewById(rootView, id);
-      if (textLogin == null) {
         break missingId;
       }
 
@@ -159,8 +180,8 @@ public final class ActivityLoginBinding implements ViewBinding {
       }
 
       return new ActivityLoginBinding((ConstraintLayout) rootView, btnGoogleSignIn, btnLogin,
-          btnRegistro, editContrasena, editUsuario, logoImage, textBienvenido, textLogin,
-          textNoCuenta, textOlvido);
+          btnRegistro, concaveCutout, editContrasena, editUsuario, headerBackground,
+          logoCircleContainer, logoImage, textBienvenido, textNoCuenta, textOlvido);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
