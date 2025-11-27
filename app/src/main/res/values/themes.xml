@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Tema base de la aplicación -->
-    <style name="Base.Theme.MedicApp" parent="Theme.AppCompat.Light.NoActionBar">
-        <!--
-          Aquí podrías personalizar colores primarios, secundarios, etc.
-          <item name="colorPrimary">@color/purple_500</item>
-          <item name="colorPrimaryVariant">@color/purple_700</item>
-          <item name="colorOnPrimary">@color/white</item>
-        -->
+    <style name="Base.Theme.MedicApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="android:statusBarColor" tools:targetApi="l">@color/purple_700</item>
+
     </style>
 
     <style name="Theme.MedicApp" parent="Base.Theme.MedicApp" />
