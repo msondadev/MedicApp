@@ -95,19 +95,21 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:textSize="20dp"
-        android:text="Registrar Usuario"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etConfirmarContraseña"
-        android:background="@drawable/bg_button_gradient"
-        android:textColor="@android:color/white"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        />
+        android:background="@drawable/bg_button_gradient"
+        android:text="Registrar Usuario"
+        android:textColor="@android:color/white"
+
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="623dp" />
+</androidx.appcompat.widget.AppCompatButton>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
