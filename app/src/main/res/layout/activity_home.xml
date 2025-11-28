@@ -244,7 +244,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <!-- ICONO 1: HOME (ID Corregido) -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -259,7 +258,6 @@
                         app:srcCompat="@drawable/btn_home" />
                 </LinearLayout>
 
-                <!-- ICONO 2: MEDICINA (ID Corregido) -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -274,7 +272,6 @@
                         app:srcCompat="@drawable/btn_medicina" />
                 </LinearLayout>
 
-                <!-- ICONO 3: MIS TURNOS (ID Corregido) -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -289,7 +286,6 @@
                         app:srcCompat="@drawable/btn_mis_turnos" />
                 </LinearLayout>
 
-                <!-- ICONO 4: PERFIL (ID Corregido) -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -306,6 +302,5 @@
             </LinearLayout>
         </com.google.android.material.bottomappbar.BottomAppBar>
 
-        <!-- Este LinearLayout vacío fue eliminado, ya que no era necesario. -->
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

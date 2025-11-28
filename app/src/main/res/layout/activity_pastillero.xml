@@ -5,222 +5,239 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- 1. HEADER / TÍTULO DE LA PANTALLA -->
     <TextView
         android:id="@+id/etPastillero"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
         android:background="@drawable/bg_header_curved_gradient"
         android:text="Pastillero"
         android:gravity="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón ATRÁS (Anclado al header) -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/atras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/outline_arrow_back_ios_24"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="@+id/etPastillero"
+        app:layout_constraintTop_toTopOf="@+id/etPastillero"
+        app:layout_constraintBottom_toBottomOf="@+id/etPastillero"
+        tools:ignore="SpUsage" />
+
+
+    <!-- 2. CAMPO: NOMBRE DEL REMEDIO -->
     <TextView
         android:id="@+id/etRemedioTitulo"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="140dp"
-        android:paddingLeft="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
         android:text="Nombre Remedio"
-        android:gravity="left"
-        android:textSize="18dp"
-        app:layout_constraintTop_toBottomOf="@id/etPastillero"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@id/etPastillero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/etRemedio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="108dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/bg_input_rounded"
         android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/etRemedioTitulo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPastillero" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="textPersonName"
+        android:hint="Ej: Ibuprofeno 600" />
 
-
+    <!-- 3. CAMPOS: HORA INICIO y CADA CUANTO (DIVIDIDOS) -->
     <TextView
         android:id="@+id/etHoraInicio"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="40dp"
-        android:gravity="left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Hora inicio"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/etRemedio"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRemedio" />
+        app:layout_constraintEnd_toStartOf="@+id/etCada"
+        app:layout_constraintHorizontal_weight="1" />
 
     <EditText
         android:id="@+id/etHoraInicioInput"
-        android:layout_width="100dp"
-
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
         android:background="@drawable/bg_input_rounded"
         android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etHoraInicio" />
+        android:hint="HH:MM"
+        android:inputType="time"
+        app:layout_constraintTop_toBottomOf="@id/etHoraInicio"
+        app:layout_constraintStart_toStartOf="@+id/etHoraInicio"
+        app:layout_constraintEnd_toEndOf="@+id/etHoraInicio" />
 
     <TextView
         android:id="@+id/etCada"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="40dp"
-        android:paddingLeft="1dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="cada"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toTopOf="@+id/etHoraInicio"
+        app:layout_constraintStart_toEndOf="@id/etHoraInicio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/etHoraInicioInput"
-        app:layout_constraintTop_toBottomOf="@+id/etRemedio" />
+        app:layout_constraintHorizontal_weight="1" />
 
     <EditText
         android:id="@+id/etCadaInput"
-        android:layout_width="100dp"
-
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/bg_input_rounded"
         android:padding="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etHoraInicio" />
+        android:hint="Horas (ej: 4)"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/etCada"
+        app:layout_constraintStart_toStartOf="@+id/etCada"
+        app:layout_constraintEnd_toEndOf="@+id/etCada" />
 
 
+    <!-- 4. CAMPO: PRESCRIPCIÓN -->
     <TextView
         android:id="@+id/etPrescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
-        android:text="Prescripcion"
-        android:textSize="18dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Prescripción (Dosis / Indicaciones)"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:paddingLeft="40dp"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="399dp" />
+        app:layout_constraintTop_toBottomOf="@id/etHoraInicioInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/etPrescripcionInput"
         android:layout_width="match_parent"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="8dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/bg_input_rounded"
         android:padding="10dp"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/etPrescripcion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPrescripcion" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- 5. NOTIFICACIÓN (SWITCH) -->
     <TextView
         android:id="@+id/etNotificacion"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="272dp"
-        android:gravity="left"
-        android:text="Notificacion"
-        android:textSize="18dp"
+        android:text="Activar Notificación"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPrescripcionInput" />
-
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/etPrescripcionInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/switch1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"/>
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="330dp"
-        tools:layout_editor_absoluteY="499dp" />
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toTopOf="@+id/etNotificacion"
+        app:layout_constraintBottom_toBottomOf="@+id/etNotificacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etNotificacion" />
 
 
+    <!-- 6. BOTONES (Anclados y distribuidos horizontalmente) -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_agregar_pastilla"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/bg_button_gradient"
-        android:text="agregar"
+        android:text="AGREGAR"
         android:textColor="@android:color/white"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/etNotificacion"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="564dp" />
+        app:layout_constraintEnd_toStartOf="@id/eliminar" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/eliminar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/bg_button_gradient"
-        android:text="eliminar"
+        android:text="ELIMINAR"
         android:textColor="@android:color/white"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="564dp" />
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@id/btn_agregar_pastilla"
+        app:layout_constraintBottom_toBottomOf="@id/btn_agregar_pastilla"
+        app:layout_constraintStart_toEndOf="@id/btn_agregar_pastilla"
+        app:layout_constraintEnd_toStartOf="@id/btn_remover_pastilla" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_remover_pastilla"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_button_gradient"
-        android:text="limpiar"
+        android:text="LIMPIAR"
         android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@id/btn_agregar_pastilla"
+        app:layout_constraintBottom_toBottomOf="@id/btn_agregar_pastilla"
+        app:layout_constraintStart_toEndOf="@id/eliminar"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="564dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/atras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="24dp"
-        android:background="@android:color/transparent"
-        android:drawableStart="@drawable/outline_arrow_back_ios_24"
-        android:textColor="@android:color/white"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="26dp" />
-
+    <!-- 7. BOTTOM NAV BAR (Anclada al fondo de la pantalla) -->
     <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="665dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -233,10 +250,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/btn_home" />
+                    app:srcCompat="@drawable/btn_home"
+                    android:contentDescription="Inicio" />
             </LinearLayout>
 
-            <!-- ICONO 2: MEDICINA (ID Corregido) -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -248,10 +265,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/btn_medicina" />
+                    app:srcCompat="@drawable/btn_medicina"
+                    android:contentDescription="Pastillero" />
             </LinearLayout>
 
-            <!-- ICONO 3: MIS TURNOS (ID Corregido) -->
+            <!-- ICONO 3: MIS TURNOS -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -263,10 +281,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/btn_mis_turnos" />
+                    app:srcCompat="@drawable/btn_mis_turnos"
+                    android:contentDescription="Mis Turnos" />
             </LinearLayout>
 
-            <!-- ICONO 4: PERFIL (ID Corregido) -->
+            <!-- ICONO 4: PERFIL -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -278,11 +297,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/btn_perfil" />
+                    app:srcCompat="@drawable/btn_perfil"
+                    android:contentDescription="Perfil" />
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.bottomappbar.BottomAppBar>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

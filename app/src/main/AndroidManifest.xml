@@ -30,11 +30,13 @@
         <activity android:name=".HomeActivity"
             android:exported="false" />
 
+        <activity android:name=".PastilleroActivity"
+            android:exported="false"
+            tools:ignore="Instantiatable"/>
 
-
-
-
-
+        <activity android:name=".TurnosActivity"
+            android:exported="false"
+            tools:ignore="Instantiatable"/>
 
 
         <activity
