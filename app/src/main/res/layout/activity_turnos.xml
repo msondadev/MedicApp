@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/bg_header_curved_gradient"
-        android:text="Pastillero"
+        android:text="Mis Turnos"
         android:gravity="center"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -36,14 +36,14 @@
         tools:ignore="SpUsage" />
 
 
-    <!-- 2. CAMPO: NOMBRE DEL REMEDIO -->
+    <!-- 2. CAMPO: NOMBRE DEL TURNO -->
     <TextView
         android:id="@+id/etRemedioTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:text="Nombre Remedio"
+        android:text="Nombre del turno"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/etPastillero"
@@ -63,15 +63,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:inputType="textPersonName"
-        android:hint="Ej: Ibuprofeno 600" />
+        android:hint="Ej: Oftalmología Dr. García" />
 
-    <!-- 3. CAMPOS: HORA INICIO y CADA CUANTO (DIVIDIDOS) -->
+    <!-- 3. CAMPOS: FECHA y HORA (DIVIDIDOS) -->
     <TextView
         android:id="@+id/etHoraInicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Hora inicio"
+        android:text="Fecha"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginStart="24dp"
@@ -88,8 +88,8 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/bg_input_rounded"
         android:padding="10dp"
-        android:hint="HH:MM"
-        android:inputType="time"
+        android:hint="DD/MM/AAAA"
+        android:inputType="date"
         app:layout_constraintTop_toBottomOf="@id/etHoraInicio"
         app:layout_constraintStart_toStartOf="@+id/etHoraInicio"
         app:layout_constraintEnd_toEndOf="@+id/etHoraInicio" />
@@ -98,7 +98,7 @@
         android:id="@+id/etCada"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="cada"
+        android:text="Hora"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginEnd="24dp"
@@ -115,21 +115,21 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/bg_input_rounded"
         android:padding="10dp"
-        android:hint="Horas (ej: 4)"
-        android:inputType="number"
+        android:hint="HH:MM"
+        android:inputType="time"
         app:layout_constraintTop_toBottomOf="@id/etCada"
         app:layout_constraintStart_toStartOf="@+id/etCada"
         app:layout_constraintEnd_toEndOf="@+id/etCada" />
 
 
-    <!-- 4. CAMPO: PRESCRIPCIÓN -->
+    <!-- 4. CAMPO: CON QUIÉN (PROFESIONAL) -->
     <TextView
         android:id="@+id/etPrescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:text="Prescripción (Dosis / Indicaciones)"
+        android:text="Con quién (Doctor/Especialidad)"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/etHoraInicioInput"
@@ -145,9 +145,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/bg_input_rounded"
         android:padding="10dp"
-        android:inputType="textMultiLine"
-        android:lines="3"
-        android:gravity="top"
+        android:inputType="textPersonName"
         app:layout_constraintTop_toBottomOf="@id/etPrescripcion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -158,7 +156,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Activar Notificación"
+        android:text="Recibir Notificación"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginStart="24dp"
@@ -179,19 +177,27 @@
         app:layout_constraintStart_toEndOf="@+id/etNotificacion" />
 
 
-    <!-- 6. BOTONES (Anclados y distribuidos horizontalmente) -->
+    <!-- 6. BOTONES (Anclados abajo y distribuidos horizontalmente) -->
+    <!-- Creamos una guía para el margen inferior si no usamos BottomAppBar -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_buttons_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="500dp" />
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_agregar_pastilla"
+        android:id="@+id/btn_reservar_turno"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="32dp"
         android:background="@drawable/bg_button_gradient"
         android:text="AGREGAR"
         android:textColor="@android:color/white"
         android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@id/etNotificacion"
+        app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/eliminar" />
 
@@ -205,13 +211,13 @@
         android:text="ELIMINAR"
         android:textColor="@android:color/white"
         android:textSize="15sp"
-        app:layout_constraintTop_toTopOf="@id/btn_agregar_pastilla"
-        app:layout_constraintBottom_toBottomOf="@id/btn_agregar_pastilla"
-        app:layout_constraintStart_toEndOf="@id/btn_agregar_pastilla"
-        app:layout_constraintEnd_toStartOf="@id/btn_remover_pastilla" />
+        app:layout_constraintTop_toTopOf="@id/btn_reservar_turno"
+        app:layout_constraintBottom_toBottomOf="@id/btn_reservar_turno"
+        app:layout_constraintStart_toEndOf="@id/btn_reservar_turno"
+        app:layout_constraintEnd_toStartOf="@id/btn_cancelar_turno" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_remover_pastilla"
+        android:id="@+id/btn_cancelar_turno"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -220,8 +226,8 @@
         android:text="LIMPIAR"
         android:textColor="@android:color/white"
         android:textSize="15sp"
-        app:layout_constraintTop_toTopOf="@id/btn_agregar_pastilla"
-        app:layout_constraintBottom_toBottomOf="@id/btn_agregar_pastilla"
+        app:layout_constraintTop_toTopOf="@id/btn_reservar_turno"
+        app:layout_constraintBottom_toBottomOf="@id/btn_reservar_turno"
         app:layout_constraintStart_toEndOf="@id/eliminar"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -237,7 +243,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:baselineAligned="false">
+            android:baselineAligned="false"> <!-- Se agregó baselineAligned para evitar warnings -->
 
             <LinearLayout
                 android:layout_width="0dp"
