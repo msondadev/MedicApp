@@ -82,7 +82,7 @@
         android:layout_height="30dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="40dp"
-        android:paddingLeft=""
+        android:paddingLeft="1dp"
         android:text="Hora"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -151,7 +151,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button3"
+        android:id="@+id/btn_reservar_turno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -181,7 +181,7 @@
         tools:layout_editor_absoluteY="564dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button3"
+        android:id="@+id/btn_cancelar_turno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -200,10 +200,10 @@
         android:id="@+id/atras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart=""
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="24dp"
         android:background="@android:color/transparent"
-        android:text=" < "
+        android:drawableStart="@drawable/outline_arrow_back_ios_24"
         android:textColor="@android:color/white"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -236,7 +236,6 @@
                     app:srcCompat="@drawable/btn_home" />
             </LinearLayout>
 
-            <!-- ICONO 2: MEDICINA (ID Corregido) -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -284,4 +283,4 @@
     </com.google.android.material.bottomappbar.BottomAppBar>
 
 
-</androidx.appcompat.widget.AppCompatButton></androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
