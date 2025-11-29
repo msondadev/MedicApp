@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/imageView_home"
+        android:icon="@drawable/btn_home"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/imageView_medicina"
+        android:icon="@drawable/btn_medicina"
+        android:title="Pastillero" />
+
+    <item
+        android:id="@+id/imageView_mis_turnos"
+        android:icon="@drawable/btn_mis_turnos"
+        android:title="Mis Turnos" />
+
+    <item
+        android:id="@+id/imageView_perfil"
+        android:icon="@drawable/btn_perfil"
+        android:title="Perfil" />
+
+</menu>
