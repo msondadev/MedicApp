@@ -37,19 +37,19 @@
             android:name=".PastilleroActivity"
             android:exported="false"
             tools:ignore="Instantiatable" />
+
+        <!-- ESTA ERA LA SECCIÓN EN CONFLICTO (YA RESUELTA) -->
         <activity
             android:name=".TurnosActivity"
             android:exported="false"
-<<<<<<< Updated upstream
-            tools:ignore="Instantiatable" />
-=======
-            tools:ignore="Instantiatable"/>
+            tools:ignore="Instantiatable" /> <!-- Cierre correcto de TurnosActivity -->
 
-        <activity android:name=".PerfilActivity"
+        <activity
+            android:name=".PerfilActivity"
             android:exported="false"
-            tools:ignore="Instantiatable"/>
+            tools:ignore="Instantiatable" /> <!-- Nueva actividad de Perfil -->
+        <!-- FIN SECCIÓN RESUELTA -->
 
->>>>>>> Stashed changes
         <activity
             android:name=".MainActivity"
             android:exported="true"
