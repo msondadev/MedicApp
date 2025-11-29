@@ -9,7 +9,7 @@ public class PerfilActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Vinculamos la Activity con su layout XML
-        setContentView(R.layout.activity_perfil);
+        setContentView(R.layout.activity_mi_perfil);
     }
 }
 

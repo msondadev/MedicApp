@@ -54,8 +54,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.appcompat)
-    implementation(libs.mediation.test.suite)
-    implementation(libs.firebase.auth)
+    // implementation(libs.mediation.test.suite)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     testImplementation(libs.junit)
@@ -65,6 +64,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.firebase:firebase-auth:22.3.0")
+    implementation("com.google.android.gms:play-services-auth:21.1.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
 }
+
