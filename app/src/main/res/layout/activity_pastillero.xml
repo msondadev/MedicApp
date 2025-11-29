@@ -250,8 +250,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/btn_home"
-                    android:contentDescription="Inicio" />
+                    android:contentDescription="Inicio"
+                    app:srcCompat="@drawable/btn_home" />
             </LinearLayout>
 
             <LinearLayout
