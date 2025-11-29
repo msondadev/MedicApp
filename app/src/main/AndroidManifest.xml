@@ -40,7 +40,16 @@
         <activity
             android:name=".TurnosActivity"
             android:exported="false"
+<<<<<<< Updated upstream
             tools:ignore="Instantiatable" />
+=======
+            tools:ignore="Instantiatable"/>
+
+        <activity android:name=".PerfilActivity"
+            android:exported="false"
+            tools:ignore="Instantiatable"/>
+
+>>>>>>> Stashed changes
         <activity
             android:name=".MainActivity"
             android:exported="true"
