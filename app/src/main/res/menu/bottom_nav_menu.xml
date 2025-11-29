@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
-        android:id="@+id/imageView_home"
-        android:icon="@drawable/btn_home"
-        android:title="Inicio" />
-
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
     <item
-        android:id="@+id/imageView_medicina"
-        android:icon="@drawable/btn_medicina"
-        android:title="Pastillero" />
-
+        android:id="@+id/navigation_medicina"
+        android:icon="@drawable/ic_medicina"
+        android:title="Medicina"/>
     <item
-        android:id="@+id/imageView_mis_turnos"
-        android:icon="@drawable/btn_mis_turnos"
-        android:title="Mis Turnos" />
-
+        android:id="@+id/navigation_turnos"
+        android:icon="@drawable/ic_turnos"
+        android:title="Turnos"/>
     <item
-        android:id="@+id/imageView_perfil"
-        android:icon="@drawable/btn_perfil"
-        android:title="Perfil" />
-
+        android:id="@+id/navigation_perfil"
+        android:icon="@drawable/ic_perfil"
+        android:title="Perfil"/>
 </menu>
+
