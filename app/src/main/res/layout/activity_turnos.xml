@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:text="Nombre del turno"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/bg_input_rounded"
         android:padding="10dp"
         app:layout_constraintTop_toBottomOf="@id/etRemedioTitulo"
@@ -70,7 +70,7 @@
         android:id="@+id/etHoraInicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:text="Fecha"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -128,7 +128,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:text="Con quién (Doctor/Especialidad)"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -155,7 +155,7 @@
         android:id="@+id/etNotificacion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:text="Recibir Notificación"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -175,18 +175,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/etNotificacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/etNotificacion" />
-
-
-    <!-- 6. BOTONES (Anclados abajo y distribuidos horizontalmente) -->
-    <!-- Creamos una guía para el margen inferior si no usamos BottomAppBar -->
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_buttons_top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="500dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
+       <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_reservar_turno"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -196,8 +185,8 @@
         android:text="AGREGAR"
         android:textColor="@android:color/white"
         android:textSize="15sp"
+           android:layout_marginTop="70dp"
         app:layout_constraintTop_toBottomOf="@id/etNotificacion"
-        app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/eliminar" />
 
@@ -232,18 +221,27 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- 7. BOTTOM NAV BAR (Anclada al fondo de la pantalla) -->
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:baselineAligned="false"> <!-- Se agregó baselineAligned para evitar warnings -->
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:menu="@menu/bottom_nav_menu"
+            app:labelVisibilityMode="labeled"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -256,8 +254,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/btn_home"
-                    android:contentDescription="Inicio" />
+                    app:srcCompat="@drawable/btn_home" />
             </LinearLayout>
 
             <LinearLayout
@@ -271,11 +268,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/btn_medicina"
-                    android:contentDescription="Pastillero" />
+                    app:srcCompat="@drawable/btn_medicina" />
             </LinearLayout>
 
-            <!-- ICONO 3: MIS TURNOS -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -287,11 +282,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/btn_mis_turnos"
-                    android:contentDescription="Mis Turnos" />
+                    app:srcCompat="@drawable/btn_mis_turnos" />
             </LinearLayout>
 
-            <!-- ICONO 4: PERFIL -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -303,10 +296,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/btn_perfil"
-                    android:contentDescription="Perfil" />
+                    app:srcCompat="@drawable/btn_perfil" />
             </LinearLayout>
         </LinearLayout>
-    </com.google.android.material.bottomappbar.BottomAppBar>
-
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
